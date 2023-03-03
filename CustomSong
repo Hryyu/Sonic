@@ -1,1 +1,38 @@
+use_synth :piano
+use_bpm 200
 
+live_loop :man do
+  # measure 1
+  play :e4
+  sleep 1.5
+  play :g4
+  sleep 0.5
+  play :b4
+  sleep 2
+  
+  # measure 2
+  play :a4
+  sleep 1.5
+  play :g4
+  sleep 0.5
+  play :e4
+  sleep 2
+  
+  # measure 3
+  play :e4
+  sleep 1.5
+  play :g4
+  sleep 0.5
+  play :b4
+  sleep 1
+  play :b4
+  sleep 1
+  
+  # measure 4
+  play :a4
+  sleep 1.5
+  play :g4
+  sleep 0.5
+  play :e4
+  sleep 2
+end
