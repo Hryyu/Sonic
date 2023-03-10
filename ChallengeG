@@ -1,0 +1,15 @@
+# Welcome to Sonic Pi
+use_bpm 168
+use_synth :kalimba
+notes = [:c2, :e2 , :g2, :b2, :c3, :b2, :g2, :e2]
+z = 0
+live_loop :main_theme do
+  with_fx :distortion do
+    8.times do
+      play notes[z]
+      sleep 0.5
+      z = z + 1
+    end
+    z = 0
+  end
+end
