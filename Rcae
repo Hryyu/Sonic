@@ -1,0 +1,32 @@
+using System.Collections.Generic;
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class triggerDuh2 : MonoBehaviour
+{
+    public Vector3 targetPosition; // The position where you want the sphere to move
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        targetPosition = new Vector3(71.82878f, 169.7621f, 81.225f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    // Upon collision with another GameObject, another GameObject will turn green
+    private void OnTriggerEnter(Collider other)
+    {
+        // Use the Console to understand what your code is doing
+        Debug.Log("HIT DETECTED!");
+
+        // Move the ball to the new location!
+        GameObject.FindWithTag("ball2").transform.position = targetPosition;
+    }
+}
